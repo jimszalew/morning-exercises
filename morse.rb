@@ -1,0 +1,63 @@
+require 'pry'
+class Morse
+
+  def initialize(message)
+    @code = {"a" => ".-",
+        "b" => "-...",
+        "c" => "-.-.",
+        "d" => "-..",
+        "e" => ".",
+        "f" => "..-.",
+        "g" => "--.",
+        "h" => "....",
+        "i" => "..",
+        "j" => ".---",
+        "k" => "-.-",
+        "l" => ".-..",
+        "m" => "--",
+        "n" => "-.",
+        "o" => "---",
+        "p" => ".--.",
+        "q" => "--.-",
+        "r" => ".-.",
+        "s" => "...",
+        "t" => "-",
+        "u" => "..-",
+        "v" => "...-",
+        "w" => ".--",
+        "x" => "-..-",
+        "y" => "-.--",
+        "z" => "--..",
+        " " => " ",
+        "1" => ".----",
+        "2" => "..---",
+        "3" => "...--",
+        "4" => "....-",
+        "5" => ".....",
+        "6" => "-....",
+        "7" => "--...",
+        "8" => "---..",
+        "9" => "----.",
+        "0" => "-----" }
+    @message = message
+    @translated = []
+  end
+
+  def letters
+    letters = @message.split(//)
+  end
+
+  def translate
+    letters.each do |letter|
+      @translated << @code[letter]
+    end
+  end
+
+  def encoded
+    translated.join(" ")
+  end
+binding.pry
+end
+
+morse = Morse.new("shit")
+puts morse.encoded
