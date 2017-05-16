@@ -59,5 +59,5 @@ class Morse
 binding.pry
 end
 
-morse = Morse.new("shit")
+morse = Morse.new("stuff")
 puts morse.encoded
