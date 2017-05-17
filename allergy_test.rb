@@ -12,14 +12,14 @@ class AllergyTest < Minitest::Test
 
   def test_it_can_check_for_one_allergy
     allergy = Allergy.new
-    result = allergy.check(2)
+    result = allergy.check
 
     assert_equal "peanuts", result
   end
 
   def test_it_can_check_for_two_allergies
     allergy = Allergy.new
-    result = allergy.check(3)
+    result = allergy.check
 
     assert_equal "peanuts, eggs", result
   end

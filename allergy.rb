@@ -1,13 +1,25 @@
 class Allergy
 
-  def check(number)
-    index.each_key do |score|
-      if index.include?(score)
-        index[number]
+  def initialize(score)
+    @score = score
+  end
+
+  def check
+    index.each_key do |num|
+      if index.include?(@score)
+        index[@score]
       else
         math
       end
     end
+  end
+
+  # def math
+  #   index.each_key do |num|
+  #     if @score > num
+  #       @score =
+  #     end
+  #   end
   end
 
   def index
