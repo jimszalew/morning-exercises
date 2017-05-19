@@ -4,24 +4,6 @@ class Allergy
     @score = score
   end
 
-  def check
-    index.each_key do |num|
-      if index.include?(@score)
-        index[@score]
-      else
-        math
-      end
-    end
-  end
-
-  # def math
-  #   index.each_key do |num|
-  #     if @score > num
-  #       @score =
-  #     end
-  #   end
-  end
-
   def index
     {1   => 'eggs',
      2   => 'peanuts',
@@ -32,5 +14,22 @@ class Allergy
      64  => 'pollen',
      128 => 'cats'}
   end
+
+
+  def check
+    index.each_key do |num|
+    return index[@score] if num == @score
+    if
+    end
+  end
+
+  # def math
+  #   index.each_key do |num|
+  #     if @score > num
+  #       @score =
+  #     end
+  #   end
+  #end
+
 
 end
